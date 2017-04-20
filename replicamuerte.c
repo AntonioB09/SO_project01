@@ -5,10 +5,10 @@
 #include <errno.h>
 #include <signal.h>
 #include <stdlib.h>
-int x;
+int x;// contador de hijos
 int main (int argc, char  **argv) {
 
- pid_t child, parent;
+ pid_t child, parent;// id del proceso padre y hijo
  
  parent = getpid();
 
