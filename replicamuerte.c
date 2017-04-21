@@ -6,7 +6,12 @@
 #include <signal.h>
 #include <stdlib.h>
 int x;// contador de hijos
-int main (int argc, char  **argv) {
+
+//void Proceso_hijo();// tarea que tiene q hacer el hijo
+
+
+
+int main () {
 
  pid_t child, parent;// id del proceso padre y hijo
  
@@ -18,7 +23,7 @@ int  p , h;
  
 
 
-for(x=1;x<=20;x++) 
+for(x=1;x<=3;x++) 
   {
    if ((child = fork()) < 0) 
     {
@@ -58,7 +63,7 @@ for(x=1;x<=20;x++)
             }//fin del esle 
    
 
-             if ( x == 15){
+             if ( x == 2){
                 printf ("kill primer hijo: %d\n",parent +1);
                 kill (child, SIGTERM);// matar primer hijo
               }
